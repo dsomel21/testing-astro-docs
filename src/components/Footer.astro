@@ -1,0 +1,28 @@
+---
+import Social from "./Social.astro";
+
+const items = [
+  {
+    description: "Learn more about my projects!",
+    platform: "GitHub",
+    url: "https://github.com/dsomel21",
+  },
+  {
+    description: "Listen to me talk about Ruby on Rails!",
+    platform: "Twitter",
+    url: "https://twitter.com/dilrajio",
+  },
+];
+---
+
+<footer>
+  {items.map((item) => <Social {...item} />)}
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
