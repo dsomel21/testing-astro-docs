@@ -1,5 +1,4 @@
 ---
-import Navigation from "../components/Navigation.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
 
@@ -43,7 +42,7 @@ const textCase = "lowercase";
   </ul>
   <p>My skills are:</p>
   <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
+    {skills.map(skill => <li class="skill">{skill}</li>)}
   </ul>
 
   <hr />
@@ -52,11 +51,5 @@ const textCase = "lowercase";
 
   {finished && <p>I finished this tutorial!</p>}
 
-  {
-    goal === 3 ? (
-      <p>My goal is to finish in 3 days.</p>
-    ) : (
-      <p>My goal is not 3 days.</p>
-    )
-  }
+  {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 </BaseLayout>
