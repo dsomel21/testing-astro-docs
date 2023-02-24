@@ -1,4 +1,5 @@
 ---
+import Greeting from "../components/Greeting";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
 
@@ -7,4 +8,8 @@ const pageTitle = "My Astro Site";
 
 <BaseLayout pageTitle={pageTitle}>
   <h1>My Awesome Blog Site</h1>
+  <Greeting
+    client:load
+    messages={["ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ", "ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫ਼ਤਿਹ", "Hello"]}
+  />
 </BaseLayout>
